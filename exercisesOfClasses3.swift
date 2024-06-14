@@ -1,3 +1,5 @@
+// TODO: Rectangle Class
+
 class Rectangle {
     private var length: Float = 1.0
     private var width: Float = 1.0
