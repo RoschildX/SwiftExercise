@@ -3,9 +3,7 @@ class Date {
     private var month: Int
     private var year: Int 
     
-    
     init(day: Int, month: Int, year: Int) {
-        
         if day >= 1 && day <= 31 {
             self.day = day 
         } else {
@@ -24,7 +22,6 @@ class Date {
             self.year = 0
         }
     } 
-    
     
     func getDay() -> Int {
         return day
@@ -55,7 +52,7 @@ class Date {
     }
     
     func setYear(year: Int) {
-        if year >= 1900 && year >= 9999 {
+        if year >= 1900 && year <= 9999 {
             self.year = year
         } else {
             self.year = 0
@@ -69,9 +66,12 @@ class Date {
     }
     
     func toString() -> String {
-        return "\(day)/\(month)/\(year)"
+        let dayString = day < 10 ? "0\(day)" : "\(day)"
+        let monthString = month < 10 ? "0\(month)" : "\(month)"
+        return "\(dayString)/\(monthString)/\(year)"
     }
 }
 
-var date = Date(day:16 ,month:5 ,year: 2029)
+var date = Date(day: 16, month: 5, year: 2029)
 print(date.toString())
+
