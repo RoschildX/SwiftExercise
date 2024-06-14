@@ -1,4 +1,4 @@
-// TODO: Time Class
+// TODO: Date Class
 
 class Date {
     private var day: Int
