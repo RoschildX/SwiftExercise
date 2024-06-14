@@ -1,7 +1,7 @@
 
-// TODO: Another Class
+import Foundation 
 
-import Foundation
+// TODO: Another Circle Class
 
 class Circle {
     private var radius: Double = 1.0
