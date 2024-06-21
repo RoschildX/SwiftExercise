@@ -33,30 +33,26 @@ struct MovableCircle: Movable {
     var center: MovablePoint
     
     mutating func moveUp() {
-        center.y -= center.ySpeed
+        center.moveUp()
     }
     
     mutating func moveDown() {
-        center.y += center.ySpeed
+        center.moveDown()
     }
     
     mutating func moveLeft() {
-        center.x -= center.xSpeed
+        center.moveLeft()
     }
     
     mutating func moveRight() {
-        center.x += center.xSpeed
+        center.moveRight()
     }
 }
 
-
-var movablepoint = MovablePoint(x: 3, y:5 , xSpeed:2, ySpeed: 4)
-
+var movablepoint = MovablePoint(x: 3, y: 5, xSpeed: 2, ySpeed: 4)
 var movablecircle = MovableCircle(radius: 8, center: movablepoint)
 
 movablecircle.moveUp()
 print(movablecircle.center)
 movablecircle.moveUp()
-print(movablecircle.center)
-
-
+print(movablecircle.center) 
