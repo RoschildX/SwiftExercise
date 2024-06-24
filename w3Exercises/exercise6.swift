@@ -19,3 +19,9 @@ class Triangle {
         print("Triangle")
     }
 }
+
+let shapes: [Drawable] = [Circle(), Rectangle(), Triangle()]
+
+for shape in shapes {
+    shape.draw()
+}
