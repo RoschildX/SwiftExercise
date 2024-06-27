@@ -1,4 +1,4 @@
-TODO: Nil-coalescing 
+TODO: Nil-coalescing.
 
 var username: String? = nil
 
