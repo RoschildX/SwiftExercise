@@ -1,4 +1,4 @@
-// TODO: Optional chaining
+// TODO: Optional chaining.
 
 class Person {
     var address: String?
