@@ -1,8 +1,25 @@
-class Calculator<T: Numeric> {
-    func add(_ num1: T, _ num2: T) -> T {
-        return num1 + num2
+class Stack<T> {
+    private var elements: [T] = []
+
+    func push(_ element: T) {
+        elements.append(element)
+    }
+
+    func pop() -> T? {
+        return elements.popLast()
+    }
+
+    func peek() -> T? {
+        return elements.last
+    }
+
+    func isEmpty() -> Bool {
+        return elements.isEmpty
     }
 }
 
-let calculator = Calculator<Int>()
-print(calculator.add(1, 2))
+let intStack = Stack<Int>()
+intStack.push(1)
+intStack.push(2)
+print(intStack.pop() ?? "Stack is empty")
+print(intStack.peek() ?? "Stack is empty") 
